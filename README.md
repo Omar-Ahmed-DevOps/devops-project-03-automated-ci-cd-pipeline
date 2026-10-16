@@ -1,13 +1,14 @@
-# Automated CI/CD Pipeline with GitHub Actions
+# Project 03: Automated CI/CD Pipeline with GitHub Actions
 
-This project demonstrates a fully automated **Continuous Integration (CI)** pipeline for a Python application using GitHub Actions.
+## 📌 Project Overview
+This project demonstrates how to set up an automated **Continuous Integration and Continuous Deployment (CI/CD)** pipeline using **GitHub Actions** for a **Python** application. The main objective is to automate code testing and linting on every `push` or `pull_request` to ensure high code quality and prevent broken code from reaching production.
 
-## 🚀 Features
-- **Automated Testing:** Runs `unittest` suites automatically on every `push` or `pull_request`.
-- **Isolated Cloud Environment:** Executes inside an Ubuntu Linux runner in GitHub Actions.
-- **Fail-Safe Mechanism:** Rejects broken builds automatically when tests fail.
+---
 
-## 🛠️ Tech Stack
-- Python 3.10
-- GitHub Actions (CI/CD)
-- Git & Bash CLI
+## 🏗 CI/CD Workflow & Architecture
+```text
+Developer Push Code → [ GitHub Repository ] → [ Trigger GitHub Actions Workflow ]
+                                                     │
+                                                     ├── 1. Set up Python Environment
+                                                     ├── 2. Install Dependencies
+                                                     └── 3. Run Automated Tests (test_app.py)
